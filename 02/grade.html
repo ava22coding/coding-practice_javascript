@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var kor=Number(prompt('국어 점수를 입력하세요.','점수를 입력하세요.'));
+        var eng=Number(prompt('영어 점수를 입력하세요.','점수를 입력하세요.'));
+        var math=Number(prompt('수학 점수를 입력하세요.','점수를 입력하세요.'));
+        var sum=kor+eng+math;
+        var avg=sum/3;
+        var result;
+       
+        if(sum>=90){
+            result='수';
+        }
+        else if(sum>=80){
+            result='우';
+        }
+        else if(sum>=70){
+            result='미';
+        }
+        else if(sum>=60){
+            result='양';
+        }
+        else{
+            result='가';
+        }
+
+        alert('총점 : '+sum+"점\n"+'평균 : '+avg+'점\n'+'결과 : '+result);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
