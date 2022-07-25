@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+            var buttonA=document.getElementById('button_a');
+            var buttonB=document.getElementById('button_b');
+            var counterA=document.getElementById('counter_a');
+            var counterB=document.getElementById('counter_b');
+            buttonA.onclick=function(){
+                counterA.innerHTML=parseInt(counterA.innerHTML)+1;
+            }
+            buttonB.onclick=function(){
+                counterB.innerHTML=parseInt(counterB.innerHTML)+1;
+                // buttonA.onclick(); 이벤트 강제 실행
+            }
+        }
+    </script>
+</head>
+<body>
+    <button id="button_a">ButtonA</button>
+    <button id="button_b">ButtonB</button>
+    <h1>Button A - <span id="counter_a">0</span></h1>
+    <h1>Button B - <span id="counter_b">0</span></h1>
+</body>
+</html>
