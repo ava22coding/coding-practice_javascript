@@ -8,19 +8,15 @@
     <script src="jquery-1.12.4.min.js"></script>
     <script>
         $(document).ready(function(){
-            setTimeout(function(){
-                var value=$('select>option:selected').val();
-                alert(value);
-            },5000);
+            var object={};
+            // 객체를 생성{}; .~~는 object객체의 속성
+            object.name='Honggildong';
+            object.gender='Male';
+            object.part='Second Guitar';
         })
     </script>
 </head>
 <body>
-    <select>
-        <option>Apple</option>
-        <option>Bag</option>
-        <option>Cat</option>
-        <option>Dog</option>
-        <option>Elephant</option>
-    </select>
+
+</body>
 </html>

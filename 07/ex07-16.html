@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-1.12.4.min.js"></script>
+    <style>
+        .high_light_0{background-color: yellow;}
+        .high_light_1{background-color: orange;}
+        .high_light_2{background-color: blue;}
+        .high_light_3{background-color: green;}
+        .high_light_4{background-color: red;}
+    </style>
+    <script>
+        $(document).ready(function(){
+            $('h1').each(function(index,item){
+                // function(번호, 객체)를 뜻함 다른 단어 써도 상관 없음 (예)function(i,it)
+                $(item).addClass('high_light_'+index);
+                // item이 h1 태그를 듯함
+            });
+        })
+    </script>
+</head>
+<body>
+    <h1>item - 0</h1>
+    <h1>item - 1</h1>
+    <h1>item - 2</h1>
+    <h1>item - 3</h1>
+    <h1>item - 4</h1>
+</body>
+</html>

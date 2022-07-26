@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var object={name:'Honggildong'};
+            // 객체를 생성{}; .~~는 object객체의 속성
+            $.extend(object,{
+            gender:'Male',
+            part:'Second Guitar'
+            })
+        var output='';
+        $.each(object,function(key,item){
+            output+=key+" : "+item+'\n';
+        });
+        alert(output);
+    })
+    </script>
+</head>
+<body>
+
+</body>
+</html>

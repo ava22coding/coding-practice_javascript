@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+        function chkData(){
+            $('#list input[name=a]').each(function(){
+                $(this).click();
+            });
+            $('li:even').css({
+                'backgroundcolor':'#000',
+                'color':'red',
+                'fontWeight':'bold'
+            })
+            // css를 두개 이상 적용할 경우에는 {}를 괄호안에 넣고 : 사용
+            // css체인보다는 위 방법을 사용하는 것이 좋음
+        }
+
+    </script>
+</head>
+<body>
+    <button onclick="chkData();">클릭하세요.</button>
+    <ul id="list">
+        <li><input type="checkbox" name="a" value="1">동해물과 백두산이</li>
+        <li><input type="checkbox" name="a" value="1">동해물과 백두산이</li>
+        <li><input type="checkbox" name="a" value="1">동해물과 백두산이</li>
+        <li><input type="checkbox" name="a" value="1">동해물과 백두산이</li>
+        <li><input type="checkbox" name="a" value="1">동해물과 백두산이</li>
+        <li><input type="checkbox" name="a" value="1">동해물과 백두산이</li>
+        <li><input type="checkbox" name="a" value="1">동해물과 백두산이</li>
+        <li><input type="checkbox" name="a" value="1">동해물과 백두산이</li>
+        <li><input type="checkbox" name="a" value="1">동해물과 백두산이</li>
+        <li><input type="checkbox" name="a" value="1">동해물과 백두산이</li>
+        <li><input type="checkbox" name="a" value="1">동해물과 백두산이</li>
+        <li><input type="checkbox" name="a" value="1">동해물과 백두산이</li>
+        <li><input type="checkbox" name="a" value="1">동해물과 백두산이</li>
+        <li><input type="checkbox" name="a" value="1">동해물과 백두산이</li>
+        <li><input type="checkbox" name="a" value="1">동해물과 백두산이</li>
+        <li><input type="checkbox" name="a" value="1">동해물과 백두산이</li>
+        <li><input type="checkbox" name="a" value="1">동해물과 백두산이</li>
+
+    </ul>
+</body>
+</html>
