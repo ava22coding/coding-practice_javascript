@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>*{border: 3px solid black;}</style>
+    <script>
+        window.onload=function(){
+            document.getElementById('header').onclick=function(){
+                alert('header');
+            }
+            document.getElementById('paragraph').onclick=function(e){
+                // 이벤트 객체를 처리
+                var event=e;
+                alert('paragraph');
+                // 이벤트 전달을 제거
+                event.cancelBubble=true;
+                if(event.stopPropagation){
+                    event.stopPropagation();
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- 이벤트 전달:이벤트 버블링 방식(자식 노드에서 부모 노드 순으로 실행) -->
+    <h1 id="header">
+        <p id="paragraph">paragraph</p>
+    </h1>
+</body>
+</html>
