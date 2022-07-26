@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('h1').each(function(){
+                if($(this).is('.select')){
+                    // is메소드 이용하면 특정 클래스가 있는지 확인 가능
+                    // if($(this).hasClass('select'))]
+                    // =>.hasClass는 괄호안에 .없음
+                    $(this).css('background','orange')
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1 class="select">Header-0</h1>
+    <h1>Header-1</h1>
+    <h1 class="select">Header-2</h1>
+</body>
+</html>

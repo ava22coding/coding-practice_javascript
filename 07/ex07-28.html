@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-1.12.4.min.js"></script>
+    <style>
+    div{float:left; width: 120px; height: 120px; text-align: center;margin: 20px; border: 3px solid #000; border-radius: 15px;}
+    </style>
+    <script>
+        $(document).ready(function(){
+            $.ajax({
+                type:'GET',
+                dataType:'xml',
+                url:'sample.xml',
+                success:function(xml){
+                $(xml).find('friend').each(function(){
+                var output='';
+                output+='<div>';
+                output+='   <h1>'+$(this).find('name').text()+'</h1>';
+                output+='   <p>'+$(this).find('language').text()+'</p>';
+                output+='</div>';
+                document.body.innerHTML+=output;
+                });
+            }   
+        });
+        })
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('h1').css('backgroundColor','orange').filter(':even').css('color','white').end().filter(':odd').css('color','red');
+            // .end()는 전단계로 돌아감
+        })
+    </script>
+</head>
+<body>
+    <h1>Header-0</h1>
+    <h1>Header-1</h1>
+    <h1>Header-2</h1>
+</body>
+</html>

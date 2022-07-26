@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-1.12.4.min.js"></script>
+    <style>
+    div{float:left; width: 120px; height: 120px; text-align: center;margin: 20px; border: 3px solid #000; border-radius: 15px;}
+    </style>
+    <script>
+        var xml='';
+        xml+='<friends>';
+        xml+='  <friend>';
+        xml+='      <name>연하진</name>';
+        xml+='      <language>Ruby</language>';
+        xml+='  </friend>';
+        xml+='  <friend>';
+        xml+='      <name>윤명원</name>';
+        xml+='      <language>Basic</language>';
+        xml+='  </friend>';
+        xml+='  <friend>';
+        xml+='      <name>윤하린</name>';
+        xml+='      <language>C#</language>';
+        xml+='  </friend>';
+        xml+='</friends>';
+        $(document).ready(function(){
+            var xmlDoc=$.parseXML(xml);
+            $(xmlDoc).find('friend').each(function(){
+                var output='';
+                output+='<div>';
+                output+='   <h1>'+$(this).find('name').text()+'</h1>';
+                output+='   <p>'+$(this).find('language').text()+'</p>';
+                output+='</div>';
+                document.body.innerHTML+=output;
+            })
+        })
+    </script>
+</head>
+<body>
+
+</body>
+</html>
