@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>.item{color:red;}</style>
+    <script src="http://code.jquery.com/jquery-1.7.js"></script>
+    <style>
+        *{margin: 5px; padding: 5px; border: 3px solid black;}
+    </style>
+    <script>
+        $(document).ready(function(){
+            $('a').click(function(event){
+                $(this).css('background-color','blue');
+                // event.stopPropagation();
+                // // a링크만 클릭한 것으로 구분지을 수 있음
+                // event.preventDefault();
+                // a링크로 넘어가지 않음
+                    // // stopPropagation쓰지 않으면 a링크 누를때 h1까지 적용됨
+                return false;
+                // 위 두줄과 동일한 의미(return false)
+            })
+            $('h1').click(function(){
+                $(this).css('background-color','red');
+            })
+        });
+
+    </script>
+</head>
+<body>
+    <h1>
+        <a href="http://www.naver.com">Naver</a>
+    </h1>
+</body>
+</html>

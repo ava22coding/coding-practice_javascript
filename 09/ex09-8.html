@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>.item{color:red;}</style>
+    <script src="http://code.jquery.com/jquery-1.7.js"></script>
+    <style>
+
+    </style>
+    <script>
+        $(document).ready(function(){
+            $('h1').click(function(){
+                // 이벤트 연결
+                $(this).html(function(index,html){
+                    return html+'★';
+                });
+            });
+            // 1초마다 함수를 실행(1초마다 trigger를 사용하여 두번째 h1을 누른것)
+            setInterval(function(){
+                $('h1').last().trigger('click');
+            },1000);
+        });
+
+    </script>
+</head>
+<body>
+    <h1>Start : </h1>
+    <h1>Start : </h1>
+</body>
+</html>

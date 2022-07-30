@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>.item{color:red;}</style>
+    <script src="http://code.jquery.com/jquery-1.7.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('h1').live('click',function(){
+                var length=$('h1').length;
+                var targetHTML=$(this).html();
+                $('#wrap').append('<h1>'+length+' - '+targetHTML+'</h1>');
+            })
+        });
+
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>Header</h1>
+    </div>
+</body>
+</html>

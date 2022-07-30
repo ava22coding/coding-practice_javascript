@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>.item{color:red;}</style>
+    <script src="http://code.jquery.com/jquery-1.7.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('textarea').keyup(function(){
+                // 남은 글자수 구하기
+                var inputLength=$(this).val().length;
+                var remain=150-inputLength;
+                $('h1').html(remain);
+
+                if(inputLength>150){
+                    $(this).val($(this).val().substring(0,150));
+                }
+                })
+            });
+            // keyup은 키보드가 떼어질 때
+            // keydowm은 키보드가 눌러질 때
+            // keypress는 글자가 입력될 때
+
+
+    </script>
+</head>
+<body>
+    <div>
+       <p>지금 내 생각은?</p>
+       <h1>150</h1>
+       <textarea cols="70" rows="5"></textarea>
+    </div>
+</body>
+</html>

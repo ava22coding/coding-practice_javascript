@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>.item{color:red;}</style>
+    <script src="jquery-1.12.4.min.js"></script>
+    <style>
+        .reverse{background: black; color: #fff;}
+    </style>
+    <script>
+        $(document).ready(function(){
+            // $('h1').bind({
+            //     mouseenter:function(){$(this).addClass('reverse');},
+            //     mouseleave:function(){$(this).removeClass('reverse');}
+            // });
+            // mouseenter와 mouseleave를 hover로 묶어서 사용 가능
+            $('h1').hover(
+                function(){$(this).addClass('reverse');},
+                function(){$(this).removeClass('reverse');}
+            )
+        });
+    </script>
+</head>
+<body>
+    <h1>Header-0</h1>
+    <h1>Header-1</h1>
+    <h1>Header-2</h1>
+</body>
+</html>
