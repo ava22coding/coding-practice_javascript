@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>.item{color:red;}</style>
+    <script src="http://code.jquery.com/jquery-1.7.js"></script>
+    <script>
+        $(document).ready(function(){
+            // 스크롤 이벤트 발생시
+            $(window).scroll(function(){
+                // 필요변수
+                var scrollHeight=$(window).scrollTop()+$(window).height();
+                // scrollTop은 스크롤 바의 위치(위에 감춰진 부분), height는 윈도우 창의 높이
+                // document 높이는 문서 전체 높이(스크롤 위치에 따라 안보이는 부분까지 합친 것)
+                var documentHeight=$(document).height();
+                if(scrollHeight == documentHeight){
+                    for(var i =0;i<10;i++){
+                        $('<h1>Infinity Scroll</h1>').appendTo('body');
+                    }
+                }
+            });
+                for(var i =0;i<20;i++){
+                        $('<h1>Infinity Scroll</h1>').appendTo('body');
+                }
+            });
+    </script>
+</head>
+<body>
+
+</body>
+
+</html>

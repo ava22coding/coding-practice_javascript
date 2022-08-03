@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>.item{color:red;}</style>
+    <script src="http://code.jquery.com/jquery-1.7.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#all_check').change(function(){
+                if(this.checked){
+                    $('#check_item').children().attr('checked',true);
+                }else{$('#check_item').children().attr('checked',false);}
+            })
+
+            });
+    </script>
+</head>
+<body>
+    <input type="checkbox" id="all_check" /><label>All</label>
+    <div id="check_item">
+        <input type="checkbox" /><label>A option</label>
+        <input type="checkbox" /><label>B option</label>
+        <input type="checkbox" /><label>C option</label>
+    </div>
+</body>
+
+</html>

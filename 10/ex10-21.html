@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+      *{margin: 0; padding: 0;}
+      body{background-color: #525252;}
+      .item{float:left; margin: 5px; width: 150px;background-color: #fff; border-radius: 4px;}
+      .big{width: 320px;}
+      .big>img{width: 320px;}
+      .item > .bottom{padding: 0 10px; position: relative; bottom: 18px;}
+    </style>
+    <script src="http://code.jquery.com/jquery-1.7.js"></script>
+    <script src="js/jquery.masonry.min.js"></script>
+  <script>
+   $(document).ready(function () {
+    $('#masonry_container').masonry({
+      itemSelector:'.item',
+      columnWidth:170,
+      isAnimated:true
+    });
+    $('.item').live('click',function(){
+      // 클릭한 대상 제거
+      $('#masonry_container').masonry('remove',$(this));
+      $('#masonry_container').masonry('reload');
+    });
+    $('#add_button').click(function(){
+      var $item=$('#masonry_container').children().clone();
+      $('#masonry_container').append($item).masonry('reload');
+    })
+  });
+  </script>
+</head>
+<body>
+  <div id="add_button"><img src="images/CJ.gif" /></div>
+  <div id="masonry_container">
+    <div class="item big">
+      <img src="images/cj1.jpg" />
+      <div class="bottom">
+        <p>Lorem ipsum dolor, sit amet</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/cj2.jpg" />
+      <div class="bottom">
+        <p>Lorem ipsum dolor, sit amet</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/cj3.jpg" />
+      <div class="bottom">
+        <p>Lorem ipsum dolor, sit amet</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/cj4.jpg" />
+      <div class="bottom">
+        <p>Lorem ipsum dolor, sit amet</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/cj5.jpg" />
+      <div class="bottom">
+        <p>Lorem ipsum dolor, sit amet</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/cj6.jpg" />
+      <div class="bottom">
+        <p>Lorem ipsum dolor, sit amet</p>
+      </div>
+    </div>
+    <div class="item big">
+      <img src="images/cj7.jpg" />
+      <div class="bottom">
+        <p>Lorem ipsum dolor, sit amet</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/cj8.jpg" />
+      <div class="bottom">
+        <p>Lorem ipsum dolor, sit amet</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/cj9.jpg" />
+      <div class="bottom">
+        <p>Lorem ipsum dolor, sit amet</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/cj10.jpg" />
+      <div class="bottom">
+        <p>Lorem ipsum dolor, sit amet</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/cj11.jpg" />
+      <div class="bottom">
+        <p>Lorem ipsum dolor, sit amet</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/cj12.jpg" />
+      <div class="bottom">
+        <p>Lorem ipsum dolor, sit amet</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/cj13.jpg" />
+      <div class="bottom">
+        <p>Lorem ipsum dolor, sit amet</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

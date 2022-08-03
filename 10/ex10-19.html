@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.8.16.custom.css" />
+    <style>
+      body{margin: 0; padding: 0;}
+     .box{float: left; width: 100px; height: 100px; box-sizing: border-box;}
+    </style>
+    <script src="http://code.jquery.com/jquery-1.7.js"></script>
+    <script src="js/jquery-ui-1.8.16.custom.min.js"></script>
+  <script>
+   $(document).ready(function () {
+    $('div.box').draggable({
+      grid:[100,100],
+      stop:function(event,ui){alert(ui.offset.top+' : '+ui.offset.left)}
+    });
+  });
+  </script>
+</head>
+<body>
+  <div class="box ui-widget-content"></div>
+  <div class="box ui-widget-content"></div>
+  <div class="box ui-widget-content"></div>
+  <div class="box ui-widget-content"></div>
+</body>
+</html>

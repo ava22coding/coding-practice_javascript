@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{list-style-type: none;}
+        #inner_fade img{height: 300px;}
+    </style>
+    <script src="http://code.jquery.com/jquery-1.7.js"></script>
+    <script src="js/jquery.innerfade.js"></script>
+    <script>
+        $(document).ready(function(){
+            // innerfade플러그인 적용
+            $('#inner_fade').innerfade({
+                animationtype:'fade',
+                speed:750,
+                timeout:2000,
+                type:'random'
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <ul id="inner_fade">
+        <li><img src="images/Chrysanthemum.jpg" /></li>
+        <li><img src="images/Desert.jpg" /></li>
+        <li><img src="images/Hydrangeas.jpg" /></li>
+        <li><img src="images/Jellyfish.jpg" /></li>
+        <li><img src="images/Koala.jpg" /></li>
+        <li><img src="images/Lighthouse.jpg" /></li>
+        <li><img src="images/Penguins.jpg" /></li>
+    </ul>
+</body>
+</html>

@@ -16,7 +16,10 @@
                 $('h1').html(remain);
 
                 if(inputLength>150){
+                    $('h1').css('color','red');
                     $(this).val($(this).val().substring(0,150));
+                }else{
+                    $('h1').css('color','black');
                 }
                 })
             });

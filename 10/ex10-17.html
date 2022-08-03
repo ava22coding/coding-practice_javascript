@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.8.16.custom.css" />
+    <style>
+        .box{padding: 5px;}
+        .box p{margin:0;padding: 5px;}
+    </style>
+    <script src="http://code.jquery.com/jquery-1.7.js"></script>
+    <script src="js/jquery-ui-1.8.16.custom.min.js"></script>
+  <script>
+   $(document).ready(function () {
+     //함수선언
+     function reset(){
+      var resetClass = 'ui-corner-all ui-widget-content box';
+      $('#output').attr('class',resetClass);
+    }
+    //jQuery UI Button 플러그인 사용
+    $('#radio').buttonset();
+    //이벤트 연결
+    $('button').click(function(){reset();});
+    $('#radio>input').change(function(){
+      reset();
+      $('#output').addClass('ui-state-'+$(this).val());
+    });
+  });
+  </script>
+</head>
+<body>
+  <div id="radio">
+    <input type="radio" name="theme" id="highlight" value="highlight" />
+    <label for="highlight">highlight</label>
+    <input type="radio" name="theme" id="error" value="error" />
+    <label for="error">error</label>
+    <input type="radio" name="theme" id="error_text" value="error_text" />
+    <label for="error_text">error_text</label>
+    <input type="radio" name="theme" id="disabled" value="disabled" />
+    <label for="disabled">disabled</label>
+    <button>RESET</button>
+</div>
+<div id="output">
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+</div>
+  </div>
+</body>
+</html>
