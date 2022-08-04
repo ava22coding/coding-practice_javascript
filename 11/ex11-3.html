@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-1.7.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(window).bind('orientationchange',function(){
+                // alert(window.orientation);
+                var output='<h1>Orientation</h1>'
+                switch(window.orientation){
+                    case 0:
+                        output+='<h2>Portrait</h2>';
+                        break;
+                    case 90:
+                        output+='<h2>Landscape</h2>';
+                        output+='<h2>right,screen turned clockwise</h2>';
+                }
+                $('body').html(output);
+            })
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
