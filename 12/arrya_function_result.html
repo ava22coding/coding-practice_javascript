@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    let names = [
+    "Steven Paul Jobs",
+    "Bill Gates",
+    "Mark Elliot Zuckerberg",
+    "Elon Musk",
+    "Jeff Bezos",
+    "Warren Edward Buffett",
+    "Larry Page",
+    "Larry Ellison",
+    "Tim Cook",
+    "Lloyd Blankfein",
+    ];
+
+// 1번
+    let data1 = names.map((item)=>{
+        return item.toUpperCase();
+    });
+    console.log(data1);
+    let data2 = names.map((item)=>{
+        return item.split(' ')[0];
+    });
+    console.log(data2);
+    let data3 = names.map((item)=>{
+        let splitName=item.split(' ');
+        let initial='';
+        splitName.forEach((nameItem)=>{
+            initial+=nameItem[0];
+        });
+        return initial;
+    });
+    console.log(data3);
+
+// 2번(-2번모르겠음)
+    let data5 = names.filter((item)=>{
+        return item.includes('a');
+    });
+    console.log(data5);
+    let data6 = names.filter((item)=>{
+        let splitName = item.split('');
+        // 한글자씩 다 배열로 갖고오는 것
+        return splitName.some((letter, index)=>
+            letter == splitName[index+1]);
+    });
+    console.log(data6);
+
+
+// 3번
+    let data7 = names.some((item)=>{
+        return item.length>=20;
+    });
+    console.log(data7);
+    let data8 = names.some((item)=>{
+        let splitName= item.split(' ');
+        splitName.pop();
+        return splitName.some((nameItem)=>
+            nameItem.toLocaleLowerCase().includes('p'));
+    });
+    console.log(data8);
+
+
+// 4번
+    let data9 = names.every((item)=>{
+        return item.length>=20;
+    });
+    console.log(data9);
+    let data10 = names.every((item)=>{
+        let splitName= item.split(' ');
+        return splitName.every((nameItem)=>{nameItem.includes('a')});
+    });
+    console.log(data10);
+
+// 5번
+    let data11 = names.find((item)=>{
+        return item.length>=20;
+    });
+    console.log(data11);
+    let data12 = names.find((item)=>{
+        return item.split(' ').length>=3;
+    });
+    console.log(data12);
+
+// 6번
+    let data13 = names.findIndex((item)=>{
+        return item.length>=20;
+    });
+    console.log(data13);
+    let data14 = names.findIndex((item)=>{
+        return item.split(' ').length>=3;
+    })
+    console.log(data14);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    let names = [
+    "Steven Paul Jobs",
+    "Bill Gates",
+    "Mark Elliot Zuckerberg",
+    "Elon Musk",
+    "Jeff Bezos",
+    "Warren Edward Buffett",
+    "Larry Page",
+    "Larry Ellison",
+    "Tim Cook",
+    "Lloyd Blankfein",
+    ];
+    let ceoList = [
+        {name:'Larry Page',age:23,ceo:true},
+        {name:'Tim Cook',age:40,ceo:true},
+        {name:'Elon Musk',age:55,ceo:false}
+    ]
+    // for(var i=0;i<names.length;i++){
+    //     console.log(names[i]);
+    // }
+    function printName(item){
+        console.log(item)
+    }
+    names.forEach(function(item,index){
+        console.log(item,index)
+    });
+    let data1 = names.map((item)=>{
+        return item+'abc';
+    })
+    console.log('names:'+data1);
+    //map은 반드시 array(배열)가 return된다. 
+    //어떤값을 리턴할지는 return에서 결정한다.
+    let data2 = ceoList.map((item)=>{
+        return item.name;
+    })
+    console.log('ceoList name'+data2);
+    let data3 = ceoList.filter((item)=>{
+        return item.age==23;
+        //조건을 넣고, 조건에 참인것만 반환.
+    })
+    console.log(data3);
+    let data4 = names.filter((item)=>{
+        return item.startsWith('L');
+    })
+    console.log(data4);
+    let data5 = names.some((item)=>{
+        //some은 조건식에 참이것이 하나라도 있으면 true반환.
+        //return item.startsWith('L');
+        return item.startsWith('A');
+    })
+    console.log('some:'+data5);
+    let data6 = names.every((item)=>{
+        //every은 조건식이 모두 맞을때 true반환.
+        //return item.startsWith('L');
+        return item.length>0;
+    })
+    console.log('every:'+data6);
+    let data7 = names.find((item)=>{
+        return item.startsWith('L')
+        //조건에 맞는 값을 찾아준다.
+        //find는 정확한 값을 하나만 찾을때 유용함
+        //filter와find의차이: filter는array, find는 string임.
+    })
+    console.log(data7);
+    let data8 = names.findIndex((item)=>{
+        return item.startsWith('L')
+        //findIndex는 find와 같고 찾은 index번호를 반환.
+    });
+    console.log('findIndex:'+data8);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
